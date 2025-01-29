@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Profile",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Profile Creator",
+  description: "Make beautiful profiles.",
   navItems: [
     {
       label: "Home",

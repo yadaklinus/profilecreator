@@ -17,12 +17,12 @@ import { toPng } from "html-to-image";
 
 export default function Home() {
 
-  const [userName, setUserName] = useState('Yadak Profile')
-  const [handle, setHandle] = useState('yadakprofile')
+  const [userName, setUserName] = useState('Yam Profile')
+  const [handle, setHandle] = useState('yamprofile')
   const [text, setText] = useState('Frontend developer and UI/UX enthusiast. Join me on this coding adventure!')
   const [followers, setFollowers] = useState(2340000)
   const [following, setFollowing] = useState(7)
-  const [imageUrl, setImageUrl] = useState<string>()
+  const [imageUrl, setImageUrl] = useState('')
   const [hashtag, setHashtag] = useState('#Frontend')
   const [verrify, setVerrify] = useState(false)
   const eleRef = useRef("")
@@ -107,9 +107,10 @@ export default function Home() {
           </CardFooter>
         </Card>
       </Card>
-      <img src={imageUrl} />
+
 
       <div>
+
         <Card className="max-w-[340px] p-4">
           <div className="text-center text-xl font-bold">Profile Information</div>
 
@@ -117,7 +118,7 @@ export default function Home() {
             color: verrify ? "primary" : "default"
           })} mb-4`}>{verrify ? "Verrifed" : "Verrify"}</Button>
 
-          <Input label="Image" className="mb-4" type="file" onChange={handleProfileChange} />
+          <Input label="Image" accept="image/*" className="mb-4" type="file" onChange={handleProfileChange} />
           <Input className="mb-4" onChange={(ev) => { setUserName(ev.target.value) }} label="User Name" />
           <Input className="mb-4" onChange={(ev) => { setHandle(ev.target.value) }} label="Handle" />
           <Input label="Hasttags" onChange={(ev => { setHashtag(ev.target.value) })} className="mb-4" />
