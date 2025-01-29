@@ -55,7 +55,7 @@ export default function Home() {
 
   function Badge() {
     return (
-      <img width={'15px'} src="/check.svg" />
+      <img width={'15px'} alt="verrify" src="/check.svg" />
     )
   }
 
